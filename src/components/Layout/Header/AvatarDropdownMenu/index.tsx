@@ -10,6 +10,8 @@ export const AvatarDropdownMenu = () => {
   const { data, status } = useSession()
   const user = data?.user
 
+  console.log('avatar', user)
+
   if (status !== 'authenticated') {
     return (
       <Link href="/login" className={'button '.concat(styles.button__signIn)}>

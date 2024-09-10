@@ -6,15 +6,17 @@ import { zodSolutionSchema } from 'utils/zod'
 // import { connectMongoose, SolutionModel } from 'service/mongoose'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  // const isRedirect = !['POST', 'GET'].includes(req.method || '')
+  const isRedirect = !['POST', 'GET'].includes(req.method || '')
 
-  // if (isRedirect) {
-  //   res.setHeader('Allow', 'POST')
-  //   res.status(405).end('Method not allowed')
-  //   return
-  // }
+  if (isRedirect) {
+    res.setHeader('Allow', 'POST')
+    res.status(405).end('Method not allowed')
+    return
+  }
 
-  // const session = await getSession({ req })
+  const session = await getSession({ req })
+
+  console.log('session', session)
 
   // if (!session?.user) {
   //   return res.status(401).send('Unauthorized')

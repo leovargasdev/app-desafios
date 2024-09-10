@@ -22,18 +22,26 @@ export const ModalSolutionForm = ({ challengeId }: ModalSolutionFormProps) => {
 
   const toast = useToast()
   const [open, setOpen] = useState<boolean>(false)
-  const [loading, setLoading] = useState<boolean>(false)
   const [hasSubmitted, setHasSubmitted] = useState<boolean>(false)
 
   const useFormMethods = useForm<SolutionForm>({
     mode: 'all',
     resolver: zodResolver(zodSolutionSchema),
-    defaultValues: DEFAULT_SOLUTION as SolutionForm
+    defaultValues: async () => {
+      try {
+        const response = await api.get(endpoint)
+        setHasSubmitted(true)
+        return response.data
+      } catch (err) {
+        console.log('deu ruim')
+        console.log(err)
+      }
+
+      return DEFAULT_SOLUTION as SolutionForm
+    }
   })
 
   const onSubmit = async (data: SolutionForm): Promise<void> => {
-    setLoading(true)
-
     try {
       await api.post(endpoint, data)
 
@@ -48,25 +56,12 @@ export const ModalSolutionForm = ({ challengeId }: ModalSolutionFormProps) => {
         description: 'Falha ao salvar o sua solução'
       })
     } finally {
-      setLoading(false)
       setOpen(false)
     }
   }
 
-  const loadSolution = async (): Promise<void> => {
-    const response = await api.get(endpoint)
+  const loadingSubmit = useFormMethods.formState.isSubmitting
 
-    if (response.status === 200) {
-      setHasSubmitted(true)
-      Object.keys(DEFAULT_SOLUTION).map((field: any) =>
-        useFormMethods.setValue(field, response.data[field])
-      )
-    }
-  }
-
-  useEffect(() => {
-    loadSolution()
-  }, [])
   return (
     <Dialog.Root onOpenChange={setOpen} open={open}>
       <Dialog.Trigger className="button">
@@ -133,8 +128,8 @@ export const ModalSolutionForm = ({ challengeId }: ModalSolutionFormProps) => {
                 </Dialog.DialogClose>
                 <button
                   type="submit"
-                  disabled={loading}
-                  className={`button ${loading ? 'loading' : ''}`}
+                  disabled={loadingSubmit}
+                  className={`button ${loadingSubmit ? 'loading' : ''}`}
                 >
                   Enviar solução
                 </button>
