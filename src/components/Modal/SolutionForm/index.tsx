@@ -1,55 +1,54 @@
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
 import * as Dialog from '@radix-ui/react-dialog'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm, FormProvider } from 'react-hook-form'
+import { RxCross1, RxPencil1, RxPlus } from 'react-icons/rx'
 
 import api from 'service/api'
-import { useChallenge, useToast } from 'hooks'
-import { DEFAULT_SOLUTION, LEVELS_OPTIONS } from 'utils/constants'
+import { useToast } from 'hooks'
 import { zodSolutionSchema, SolutionForm } from 'utils/zod'
+import { DEFAULT_SOLUTION, LEVELS_OPTIONS } from 'utils/constants'
 
 import { Input, RadioGroup } from 'components/Form'
-import { IconClose, IconPlus, IconPencil } from 'components/SVG'
 
 import styles from './styles.module.scss'
 
-type SolutionProps = keyof typeof DEFAULT_SOLUTION
+interface ModalSolutionFormProps {
+  challengeId: string
+}
 
-export const ModalSolutionForm = () => {
+export const ModalSolutionForm = ({ challengeId }: ModalSolutionFormProps) => {
+  const endpoint = `challenge/${challengeId}/solution`
+
   const toast = useToast()
-  const router = useRouter()
-  const challenge = useChallenge()
-  const [hasSubmittedSolution, setHasSubmittedSolution] = useState(false)
+  const [open, setOpen] = useState<boolean>(false)
+  const [hasSubmitted, setHasSubmitted] = useState<boolean>(false)
 
   const useFormMethods = useForm<SolutionForm>({
     mode: 'all',
     resolver: zodResolver(zodSolutionSchema),
-    defaultValues: {
-      repository_url: '',
-      url: '',
-      linkedin_url: ''
+    defaultValues: async () => {
+      try {
+        const response = await api.get(endpoint)
+        setHasSubmitted(true)
+        return response.data
+      } catch (err) {
+        console.log('deu ruim')
+        console.log(err)
+      }
+
+      return DEFAULT_SOLUTION as SolutionForm
     }
   })
 
-  const [loading, setLoading] = useState<boolean>(false)
-  const disabledInputs = ['closed', 'voting'].includes('status.type')
-
   const onSubmit = async (data: SolutionForm): Promise<void> => {
-    setLoading(true)
-
     try {
-      const endpoint = `challenge/${challenge.id}/solution`
-      const response = await api.post(endpoint, data)
+      await api.post(endpoint, data)
 
-      const descriptionType =
-        response.data.type === 'create' ? 'salva' : 'atualizada'
+      const actionType = hasSubmitted ? 'atualizada' : 'salva'
+      const description = `Solução ${actionType} com sucesso`
 
-      toast.success('Sucesso', {
-        description: `Solução ${descriptionType} com sucesso`
-      })
-
-      router.push('/')
+      toast.success('Sucesso', { description })
     } catch (err) {
       console.log(err)
 
@@ -57,38 +56,24 @@ export const ModalSolutionForm = () => {
         description: 'Falha ao salvar o sua solução'
       })
     } finally {
-      setLoading(false)
-    }
-  }
-  const loadSolution = async () => {
-    const response = await api.get(`challenge/${challenge.id}/solution`)
-
-    const fields = ['repository_url', 'url', 'level', 'linkedin_url']
-
-    if (response.data) {
-      setHasSubmittedSolution(true)
-      fields.map(field =>
-        useFormMethods.setValue(field as SolutionProps, response.data[field])
-      )
+      setOpen(false)
     }
   }
 
-  useEffect(() => {
-    loadSolution()
-  }, [])
+  const loadingSubmit = useFormMethods.formState.isSubmitting
 
   return (
-    <Dialog.Root>
-      <Dialog.Trigger className={'button '.concat(styles.button__trigger)}>
-        {hasSubmittedSolution ? (
+    <Dialog.Root onOpenChange={setOpen} open={open}>
+      <Dialog.Trigger className="button">
+        {hasSubmitted ? (
           <>
-            <IconPencil />
-            <span className={styles.button__text}>Editar solução</span>
+            <RxPencil1 size={14} />
+            <span>Editar solução</span>
           </>
         ) : (
           <>
-            <IconPlus />
-            <span className={styles.button__text}>Enviar solução</span>
+            <RxPlus size={14} />
+            <span>Enviar solução</span>
           </>
         )}
       </Dialog.Trigger>
@@ -103,7 +88,7 @@ export const ModalSolutionForm = () => {
               </Dialog.Description>
             </div>
             <Dialog.DialogClose>
-              <IconClose />
+              <RxCross1 />
             </Dialog.DialogClose>
           </header>
 
@@ -115,7 +100,6 @@ export const ModalSolutionForm = () => {
                   label="Repositório"
                   name="repository_url"
                   placeholder="Link do repositório (ex: github, gitlab, bitbucket, etc...)"
-                  disabled={disabledInputs}
                 />
 
                 <Input
@@ -123,7 +107,6 @@ export const ModalSolutionForm = () => {
                   type="url"
                   label="Visualização"
                   placeholder="Link para visualizar o projeto"
-                  disabled={disabledInputs}
                 />
 
                 <Input
@@ -145,8 +128,8 @@ export const ModalSolutionForm = () => {
                 </Dialog.DialogClose>
                 <button
                   type="submit"
-                  disabled={loading}
-                  className={`button ${loading ? 'loading' : ''}`}
+                  disabled={loadingSubmit}
+                  className={`button ${loadingSubmit ? 'loading' : ''}`}
                 >
                   Enviar solução
                 </button>

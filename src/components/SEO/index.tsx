@@ -16,7 +16,7 @@ export const SEO = ({
 }: SEOProps) => {
   const { asPath } = useRouter()
 
-  const titleTab = `BR Challenges | ${tabName || title}`
+  const titleTab = `BRChallenges • ${tabName || title}`
   const urlPage = 'https://www.brchallenges.com' + asPath
 
   return (

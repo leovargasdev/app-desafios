@@ -1,0 +1,236 @@
+[
+  {
+      "id": "empire-burger",
+      "name": "Empire Burger",
+      "deadline": "2023-10-03",
+      "image": {
+          "dimensions": {
+              "width": 1798,
+              "height": 635
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.prismic.io/brchallenges/289d6134-7e60-4c8f-827a-a9514cffe100_Captura+de+tela+de+2023-11-26+16-42-17.png?auto=compress,format"
+      },
+      "authors": [
+          {
+              "name": "Tiago Alves",
+              "description": "UI Designer Pleno | Diretor de Criação",
+              "image": {
+                  "dimensions": {
+                      "width": 150,
+                      "height": 150
+                  },
+                  "alt": "Imagem de perfil do Tiago Alves",
+                  "copyright": null,
+                  "url": "https://images.prismic.io/brchallenges/f8c84d81-1260-4deb-a75a-715f18b4e66d_avatar-tiago-alves.png?auto=compress,format"
+              },
+              "links": [
+                  {
+                      "type": "linkedin",
+                      "link": {
+                          "link_type": "Web",
+                          "url": "https://www.linkedin.com/in/tiago-alves-775992105",
+                          "target": "_blank"
+                      }
+                  },
+                  {
+                      "type": "behance",
+                      "link": {
+                          "link_type": "Web",
+                          "url": "https://www.behance.net/tiagofenixe9d9",
+                          "target": "_blank"
+                      }
+                  },
+                  {
+                      "type": "instagram",
+                      "link": {
+                          "link_type": "Web",
+                          "url": "https://www.instagram.com/designer_produtivo_/",
+                          "target": "_blank"
+                      }
+                  },
+                  {
+                      "type": "website",
+                      "link": {
+                          "link_type": "Web",
+                          "url": "https://designerprodutivo.com.br/link-bio/",
+                          "target": "_blank"
+                      }
+                  }
+              ]
+          }
+      ],
+      "status_prismic": "finished",
+      "users": [
+          "https://lh3.googleusercontent.com/a/ACg8ocL870PI_QW8iFnXmYyOXUR1bKplbUz-wkYO_CCuF-7Y4Fo=s96-c",
+          "https://lh3.googleusercontent.com/a/ACg8ocJy2DqqChfuQouQ68-HQsFoyPbWJ8oBmVhb07NCBrCecg=s96-c",
+          "https://avatars.githubusercontent.com/u/143128765?v=4",
+          "https://avatars.githubusercontent.com/u/39505479?v=4",
+          "https://avatars.githubusercontent.com/u/108540280?v=4",
+          "https://lh3.googleusercontent.com/a/ACg8ocJ2msLvoWIc4059zPJM6c5r51s0GvuuOVjCN_-kBx9rTA=s96-c",
+          "https://avatars.githubusercontent.com/u/70710358?v=4",
+          "https://avatars.githubusercontent.com/u/99447663?v=4",
+          "https://avatars.githubusercontent.com/u/125400024?v=4",
+          "https://avatars.githubusercontent.com/u/53182026?v=4",
+          "https://lh3.googleusercontent.com/a/ACg8ocJ36QDq6rFJ8oM7KjrTn5dTXS32N4nhd7gBN9ZXMlPuPL0=s96-c",
+          "https://avatars.githubusercontent.com/u/47865001?v=4",
+          "https://avatars.githubusercontent.com/u/127137438?v=4"
+      ],
+      "participants": 140
+  },
+  {
+      "id": "blizzard",
+      "name": "Blizzard",
+      "deadline": "2023-01-01",
+      "image": {
+          "dimensions": {
+              "width": 1517,
+              "height": 775
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.prismic.io/brchallenges/4ec42e3a-d334-4f2a-9c37-29706d13ce88_banner-desafio-blizzard.png?auto=compress,format"
+      },
+      "authors": [
+          {
+              "name": "Gilberto Prado",
+              "description": "Fundador da Insany Design | Senior UI Designer | Criador do uiBoost",
+              "image": {
+                  "dimensions": {
+                      "width": 800,
+                      "height": 800
+                  },
+                  "alt": "Foto de perfil do Gilberto Prado",
+                  "copyright": null,
+                  "url": "https://images.prismic.io/brchallenges/b66932af-7840-4565-bc4f-a65f625cd055_1668693154594.jpeg?auto=compress,format"
+              },
+              "links": [
+                  {
+                      "type": "linkedin",
+                      "link": {
+                          "link_type": "Web",
+                          "url": "https://www.linkedin.com/in/gilberto-insanydesign/"
+                      }
+                  },
+                  {
+                      "type": "behance",
+                      "link": {
+                          "link_type": "Web",
+                          "url": "https://www.behance.net/insanydesign"
+                      }
+                  },
+                  {
+                      "type": "dribbble",
+                      "link": {
+                          "link_type": "Web",
+                          "url": "https://dribbble.com/insanyDesign"
+                      }
+                  },
+                  {
+                      "type": "instagram",
+                      "link": {
+                          "link_type": "Web",
+                          "url": "https://www.instagram.com/insanydesign/"
+                      }
+                  },
+                  {
+                      "type": "website",
+                      "link": {
+                          "link_type": "Web",
+                          "url": "https://insany.design/"
+                      }
+                  }
+              ]
+          }
+      ],
+      "status_prismic": "finished",
+      "users": [
+          "https://lh3.googleusercontent.com/a/ACg8ocL870PI_QW8iFnXmYyOXUR1bKplbUz-wkYO_CCuF-7Y4Fo=s96-c",
+          "https://avatars.githubusercontent.com/u/70710358?v=4",
+          "https://lh3.googleusercontent.com/a/ACg8ocJ36QDq6rFJ8oM7KjrTn5dTXS32N4nhd7gBN9ZXMlPuPL0=s96-c",
+          "https://avatars.githubusercontent.com/u/47865001?v=4",
+          "https://avatars.githubusercontent.com/u/37486496?v=4",
+          "https://avatars.githubusercontent.com/u/119149285?v=4",
+          "https://avatars.githubusercontent.com/u/98669788?v=4",
+          "https://lh3.googleusercontent.com/a/ACg8ocKc08p-8s7KH5Z3bbABeaQSAZj8tm7IzogWfhzReyNapLg=s96-c"
+      ],
+      "participants": 126
+  },
+  {
+    "id": "paqueta-calcados",
+    "name": "Paquetá Calçados",
+    "deadline": "2023-07-02",
+    "image": {
+        "dimensions": {
+            "width": 1872,
+            "height": 961
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.prismic.io/brchallenges/55b4b298-c3ee-4386-8cd0-5059aec46a8a_capa-desafio-paqueta-calcados.png?auto=compress,format"
+    },
+    "authors": [
+        {
+            "name": "Ana Maria Almeida",
+            "description": "UI Design",
+            "image": {
+                "dimensions": {
+                    "width": 325,
+                    "height": 332
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/brchallenges/65e83002-4e95-4718-b586-55d40f3ec0b5_Image.png?auto=compress,format"
+            },
+            "links": [
+                {
+                    "type": "linkedin",
+                    "link": {
+                        "link_type": "Web",
+                        "url": "https://www.linkedin.com/in/anamariawca/",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "type": "behance",
+                    "link": {
+                        "link_type": "Web",
+                        "url": "https://www.behance.net/anamariawca"
+                    }
+                },
+                {
+                    "type": "instagram",
+                    "link": {
+                        "link_type": "Web",
+                        "url": "https://www.instagram.com/anamariawca/",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "type": "dribbble",
+                    "link": {
+                        "link_type": "Web",
+                        "url": "https://dribbble.com/anamariawca",
+                        "target": "_blank"
+                    }
+                }
+            ]
+        }
+    ],
+    "status_prismic": "finished",
+    "users": [
+        "https://avatars.githubusercontent.com/u/149005855?v=4",
+        "https://avatars.githubusercontent.com/u/93059906?v=4",
+        "https://avatars.githubusercontent.com/u/39505479?v=4",
+        "https://lh3.googleusercontent.com/a/ACg8ocJ2msLvoWIc4059zPJM6c5r51s0GvuuOVjCN_-kBx9rTA=s96-c",
+        "https://avatars.githubusercontent.com/u/149213668?v=4",
+        "https://lh3.googleusercontent.com/a/ACg8ocJ36QDq6rFJ8oM7KjrTn5dTXS32N4nhd7gBN9ZXMlPuPL0=s96-c",
+        "https://avatars.githubusercontent.com/u/115591322?v=4",
+        "https://avatars.githubusercontent.com/u/83200247?v=4",
+        "https://avatars.githubusercontent.com/u/98669788?v=4",
+        "https://lh3.googleusercontent.com/a/ACg8ocL6EEZTnLiMmBYEwTHdgI3VSJep2ECbaK4RLakz73_ZXZo=s96-c"
+    ],
+    "participants": 44
+  }
+]

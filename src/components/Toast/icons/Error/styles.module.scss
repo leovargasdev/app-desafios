@@ -1,0 +1,77 @@
+@keyframes circleAnimation {
+  from {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+@keyframes firstLineAnimation {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes secondLineAnimation {
+  from {
+    transform: scale(0) rotate(90deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(90deg);
+    opacity: 1;
+  }
+}
+
+.icon {
+  grid-area: icon;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: var(--red);
+  position: relative;
+  transform: rotate(45deg);
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    border-radius: 3px;
+    background: #fff;
+    bottom: 9px;
+    left: 4px;
+    height: 2px;
+    width: 12px;
+  }
+  
+  &:before {
+    transform: rotate(90deg);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    opacity: 0;
+    animation: circleAnimation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+      forwards;
+    animation-delay: 100ms;
+
+    &:before,
+    &:after {
+      opacity: 0;
+      animation: firstLineAnimation 0.15s ease-out forwards;
+      animation-delay: 150ms;
+    }
+
+    &:before {
+      animation: secondLineAnimation 0.15s ease-out forwards;
+      animation-delay: 180ms;
+    }
+  }
+}

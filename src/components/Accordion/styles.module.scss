@@ -6,9 +6,10 @@
 }
 
 .accordion__item {
-  background: var(--mauve2);
+  background: var(--background-secondary);
   border-radius: 4px;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .accordion__trigger {
@@ -19,9 +20,12 @@
   justify-content: space-between;
 
   font-weight: 500;
+  letter-spacing: -0.3px;
+  font-size: 1.125rem;
+  font-family: var(--family-bold);
 
   padding: 24px;
-  background: var(--mauve3);
+  background: var(--background-quartenary);
 
   svg {
     transform: rotate(90deg);
@@ -37,7 +41,7 @@
   padding: 30px 48px;
   border-top: 1px #000;
 
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 2rem;
   font-weight: 300;
 

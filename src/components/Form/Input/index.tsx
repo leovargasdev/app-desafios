@@ -1,33 +1,30 @@
-import { InputHTMLAttributes } from 'react'
-import { useFormContext } from 'react-hook-form'
+import { ComponentProps } from 'react'
+import { useController, useFormContext } from 'react-hook-form'
 
 import { ErrorMessage } from 'components/Form'
 
 import styles from './styles.module.scss'
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface InputProps extends ComponentProps<'input'> {
   name: string
   label: string
 }
 
 export const Input = ({ name, label, ...rest }: InputProps) => {
-  const {
-    register,
-    formState: { errors }
-  } = useFormContext()
+  const { control } = useFormContext()
+  const { field, fieldState } = useController({ name, control })
 
-  const error = errors[name]?.message
+  const error = fieldState.error?.message
   const isError = typeof error === 'string'
 
   return (
     <fieldset className={styles.input}>
       <label htmlFor={name}>{label}</label>
       <input
-        id={name}
         className={isError ? styles.error : ''}
         aria-invalid={isError}
         {...rest}
-        {...register(name)}
+        {...field}
       />
 
       <ErrorMessage name={name} />

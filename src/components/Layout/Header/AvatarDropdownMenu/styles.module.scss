@@ -1,0 +1,89 @@
+.button__signIn {
+  max-width: 150px;
+
+  @media(max-width: 768px) {
+    display: none!important;
+  }
+}
+
+.user__avatar {
+  position: relative;
+
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+
+  overflow: hidden;
+  background: transparent;
+  border-color: transparent;
+
+  span {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+    background: var(--link-dark);
+
+    svg {
+      margin: auto;
+      width: 28px;
+      height: auto;
+    }
+  }
+
+  @media(max-width: 768px) {
+    display: none;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  row-gap: 4px;
+
+  padding: 10px;
+  border-radius: 4px;
+  background: var(--mauve2);
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
+
+  color: var(--text);
+
+  z-index: 999;
+
+  strong {
+    padding: 0 14px;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+
+  border-radius: 4px;
+  padding: 8px 14px;
+
+  span {
+    display: flex;
+    width: 24px;
+
+    svg {
+      margin: auto;
+    }
+  }
+
+  &:hover, &:focus {
+    cursor: pointer;
+    background: var(--line);
+  }
+}
+
+.separator {
+  margin: 8px 0;
+  height: 1px;
+  background: var(--text-placeholder);
+}

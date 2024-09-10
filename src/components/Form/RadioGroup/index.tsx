@@ -1,37 +1,41 @@
-import { useState } from 'react'
-import { useFormContext } from 'react-hook-form'
+import { useController, useFormContext } from 'react-hook-form'
 
-import { Radio, RadioOption, ErrorMessage } from 'components/Form'
+import { ErrorMessage } from 'components/Form'
 
 import styles from './styles.module.scss'
 
 interface RadioGroupProps {
   name: string
   label: string
-  options: Omit<RadioOption, 'name' | 'isChecked' | 'onClick'>[]
+  options: {
+    label: string
+    value: string
+  }[]
 }
 
 export const RadioGroup = ({ name, label, options }: RadioGroupProps) => {
-  const { getValues } = useFormContext()
-  const [checked, setChecked] = useState<string>(getValues(name) || '')
-
-  const handleCheckedRadio = (value: string): void => {
-    setChecked(value)
-  }
+  const { control } = useFormContext()
+  const { field } = useController({ name, control })
 
   return (
     <fieldset className={styles.container}>
-      <label className={styles.label}>{label}</label>
+      <label>{label}</label>
 
       <div className={styles.radios}>
         {options.map(option => (
-          <Radio
-            {...option}
+          <div
             key={option.value}
-            name={name}
-            isChecked={checked === option.value}
-            onClick={handleCheckedRadio}
-          />
+            className={styles.radio}
+            aria-checked={field.value === option.value}
+          >
+            <input
+              type="radio"
+              id={option.value}
+              {...field}
+              onChange={() => field.onChange(option.value)}
+            />
+            <label htmlFor={option.value}>{option.label}</label>
+          </div>
         ))}
       </div>
 

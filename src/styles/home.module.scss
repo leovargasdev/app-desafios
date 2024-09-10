@@ -1,26 +1,28 @@
-.home {
-  padding-top: 48px;
-
+.container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
 
+  margin-top: 64px;
+  padding: 0 64px;
+
   width: 100%;
   max-width: var(--width-normal);
 
+  @media(max-width: 1200px) {
+    max-width: 100%;
+    padding: 0 24px;
+    margin-top: 24px;
 
-  @media(max-width: 1440px) {
-    padding: 48px 24px 0;
+    gap: 32px;
   }
 
-  @media(max-width: 900px) {
-    padding: 48px 64px 0;
-    gap: 48px 0;
+  @media(max-width: 768px) {
     grid-template-columns: 1fr;
   }
 
   @media(max-width: 650px) {
-    padding: 24px 20px 0;
-    row-gap: 24px;
+    padding: 0 16px;
+    margin-top: 16px;
   }
 }

@@ -9,7 +9,8 @@ const nextConfig = {
       'media-exp1.licdn.com',
       'lh3.googleusercontent.com'
     ]
-  }
+  },
+  pageExtensions: ['page.tsx', 'ts'],
 }
 
 module.exports = nextConfig

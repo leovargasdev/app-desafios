@@ -1,0 +1,117 @@
+.challenge {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .challenge__date {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-family: var(--family-bold);
+  }
+
+  h2 {
+    letter-spacing: 0.2px;
+    font-weight: 700;
+    font-family: var(--family-bold);
+
+    font-size: 22px;
+    color: var(--text-secondary);
+  }
+
+  .challenge__description {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 24px;
+
+    h3 {
+      margin-top: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    > ul, > ol {
+      list-style: none;
+      width: 100%;
+      max-width: 780px;
+  
+      li {
+        & + li {
+          margin-top: 12px;
+        }
+    
+        &:before {
+          content: "";
+          background: transparent;
+      
+          display: inline-flex;
+          margin-right: 6px;
+      
+          width: 14px;
+          height: 14px;
+          border-radius: 3px;
+          border: 1px solid var(--text-secondary);
+        }
+      }
+    }
+  
+    > ul li, > ol li, p {
+      font-size: 1.125rem;
+      line-height: 1.5;
+      color: var(--text);
+  
+      a {
+        font-weight: 500;
+        color: var(--blue);
+      }
+    }
+  }
+
+  @media(max-width: 768px) {
+    row-gap: 24px;
+  }
+
+  @media(max-width: 650px) {
+    row-gap: 16px;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .challenge__date {
+      font-size: 0.875rem;
+      margin-top: 4px;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    .challenge__description {
+      h3 {
+        margin-top: 14px;
+      }
+
+      > ul li, > ol li, p {
+        font-size: 0.875rem;
+        line-height: 1.8;
+      }
+    }
+  }
+}
+
+.challenge__layout {
+  width: 100%;
+  height: 420px;
+  border: 0;
+  border-radius: 8px;
+
+  margin-top: 6px;
+}

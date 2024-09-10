@@ -7,11 +7,10 @@
   width: 100%;
   padding: 10px 0;
   border-radius: 8px;
-  background: var(--violet9);
+  background: var(--purple);
 
   font-size: 0.875rem;
-  font-weight: 500;
-  font-family: var(--family-bold);
+  font-weight: 600;
 
   transition: all 0.4s;
 
@@ -19,25 +18,21 @@
     opacity: 0.7;
     user-select: none;
     pointer-events: none;
-    background: var(--violet5);
+    filter: grayscale(0.6);
   }
 
   &:hover {
-    background: var(--violet8);
+    filter: brightness(0.9);
   }
 
   &.small {
     padding: 8px 0;
   }
+}
 
-  &.secondary {
-    background: var(--mauve3);
-    border: 1px solid var(--mauve6);
-
-    &:hover {
-      background: var(--mauve4);
-    }
-  }
+.button.secondary {
+  border: 1px solid var(--line);
+  background: var(--background-secondary);
 }
 
 .loading {

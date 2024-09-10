@@ -4,23 +4,17 @@
   align-items: flex-start;
   row-gap: 6px;
 
-  label {
-    font-size: 1rem;
-    line-height: 1.25rem;
-    color: var(--mauve11);
-  }
-
   input {
     outline: none;
 
     width: 100%;
     padding: 12px;
     border-radius: 6px;
-    background: var(--mauve3);
-    border: 1px solid var(--mauve3);
+    border: 1px solid var(--line);
+    background: var(--background-tertiary);
 
     &:focus, &:not(:placeholder-shown) {
-      border-color: var(--violet8);
+      border-color: var(--purple);
     }
 
     &[aria-invalid=true] {
@@ -28,8 +22,8 @@
     }
 
     &::placeholder {
-      color: var(--mauve8);
       font-weight: 400;
+      color: var(--text-secondary);
     }
 
     &:disabled {

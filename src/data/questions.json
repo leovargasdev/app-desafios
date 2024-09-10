@@ -1,0 +1,40 @@
+[
+  {
+    "id": "question-01",
+    "name": "Os desafios sempre estarão disponíveis?",
+    "description": [
+      "Sim, os desafios estarão sempre disponíveis para os usuários. Isso permite que os desenvolvedores possam acessar e completar os desafios a qualquer momento, conforme sua disponibilidade e ritmo de aprendizado."
+    ]
+  },
+  {
+    "id": "question-02",
+    "name": "Tenho algum prazo para finalizar um desafio?",
+    "description": [
+      "Não, os desafios não possuem prazo para serem finalizados. Os usuários podem completar os desafios a qualquer momento, sem restrições de tempo. Isso permite que os desenvolvedores possam acessar e completar os desafios de acordo com sua disponibilidade e ritmo de aprendizado."
+    ]
+  },
+  {
+    "id": "question-03",
+    "name": "Posso fazer uma publicação no linkedin sobre a solução do desafio?",
+    "description": [
+      "Sim, é permitido compartilhar a solução de um desafio em sua rede social, como o LinkedIn. Isso pode ser uma ótima maneira de mostrar suas habilidades para sua rede profissional e ajudá-lo a se destacar no mercado de trabalho.",
+      "Só não se esqueça de colocar o link do autor do protótipo e também incluir o link da página do desafio, assim ajuda a divulgar a plataforma para mais pessoas :)"
+    ]
+  },
+  {
+    "id": "question-04",
+    "name": "Escolhi uma dificuldade no envio da soluçao, posso mudar para outra dificuldade?",
+    "description": [
+      "Sim, é possível mudar de nível de dificuldade mesmo após ter feito o envio na plataforma. Isso permite que você escolha desafios que sejam adequados para o seu nível de habilidade e progrida gradualmente.",
+      "Se você escolheu um desafio fácil e deseja desafiar-se mais, pode mudar para um nível de dificuldade médio ou difícil."
+    ]
+  },
+  {
+    "id": "question-05",
+    "name": "Posso usar algum framework ou biblioteca na minha solução?",
+    "description": [
+      "Sim, você pode usar qualquer ferramenta que deseja para ajudá-lo a completar o desafio, não será avaliado o código, mas sim a fidelidade ao layout e a implementação das funcionalidades solicitadas.",
+      "Então, se você tem algo que gostaria de praticar, sinta-se à vontade para tentar."
+    ]
+  }
+]

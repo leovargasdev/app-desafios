@@ -1,13 +1,12 @@
-import React, { useImperativeHandle, useState } from 'react'
 import { FiX } from 'react-icons/fi'
 import * as ToastPrimitive from '@radix-ui/react-toast'
+import React, { useImperativeHandle, useState } from 'react'
 
-import { CheckmarkIcon } from './icons/CheckmarkIcon'
-import { ErrorIcon } from './icons/ErrorIcon'
+import toastIcons from './icons'
 
 import styles from './styles.module.scss'
 
-type ToastStatus = 'success' | 'error'
+type ToastStatus = keyof typeof toastIcons
 
 interface ToastOptions {
   id: string
@@ -35,11 +34,6 @@ export type ToastTypeFn = (
 export const ToastViewport = () => (
   <ToastPrimitive.Viewport className={styles.toast__viewport} />
 )
-
-const toastIcons = {
-  success: <CheckmarkIcon />,
-  error: <ErrorIcon />
-}
 
 export const Toast = React.forwardRef((props, forwardedRef) => {
   const [toasts, setToasts] = useState<Array<ToastOptions>>([])

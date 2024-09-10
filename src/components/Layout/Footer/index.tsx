@@ -12,7 +12,7 @@ export const LayoutFooter = () => (
           rel="noreferrer"
           href="https://www.leonardovargas.dev/"
         >
-          Leo Vargas
+          Leo Vargas ✌
         </a>
       </p>
     </div>

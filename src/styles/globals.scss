@@ -9,149 +9,45 @@
 }
 
 :root {
-  --text: #94a1b2;
-  --text-light: #fffffe;
-  --text-dark: #72757e;
-  --text-placeholder: #44475a;
+  --background: #161618;
+  --background-secondary: #1c1c1f;
+  --background-tertiary: rgba(255, 255, 255, 0.03);
+  --background-quartenary: #222;
 
-  --background: #161626;
-  --background-light: rgba(40, 42, 54, 0.4);
+  --text: #fff;
+  --text-secondary: #858584;
 
-  --white: rgba(255, 255, 255, 0.1);
+  --line: rgba(255, 255, 255, 0.1);
 
-  --link: #7f5af0;
-  --link-dark: #2f2843;
+  --purple: #6e56cf;
+  --blue: #52a9ff;
+  --red: #e5484d;
   --green: #2cb67d;
-  --red: #ff6b6b;
-  --blue-dark: #4e4187;
 
-  --family-normal: Inter, sans-serif;
-  --family-bold: Poppins, sans-serif;
-
-  --toast-viewport-padding: 25px;
+  --family-normal: 'Work Sans', sans-serif;
+  --family-bold: 'Space Mono', monospace;
 
   --width-normal: 1360px;
-  --width-medium: 900px;
+  --width-medium: 1100px;
   --width-small: 600px;
-
-  --mauve1: #161618;
-  --mauve2: #1c1c1f;
-  --mauve3: #232326;
-  --mauve4: #28282c;
-  --mauve5: #2e2e32;
-  --mauve6: #34343a;
-  --mauve7: #3e3e44;
-  --mauve8: #504f57;
-  --mauve9: #706f78;
-  --mauve10: #7e7d86;
-  --mauve11: #a09fa6;
-  --mauve12: #ededef;
-
-  --violet1: #17151f;
-  --violet2: #1c172b;
-  --violet3: #251e40;
-  --violet4: #2c2250;
-  --violet5: #32275f;
-  --violet6: #392c72;
-  --violet7: #443592;
-  --violet8: #5842c3;
-  --violet9: #6e56cf;
-  --violet10: #7c66dc;
-  --violet11: #9e8cfc;
-  --violet12: #f1eefe;
-
-  --green1: #0d1912;
-  --green2: #0c1f17;
-  --green3: #0f291e;
-  --green4: #113123;
-  --green5: #133929;
-  --green6: #164430;
-  --green7: #1b543a;
-  --green8: #236e4a;
-  --green9: #30a46c;
-  --green10: #3cb179;
-  --green11: #4cc38a;
-  --green12: #e5fbeb;
-
-  --orange1: #1f1206;
-  --orange2: #2b1400;
-  --orange3: #391a03;
-  --orange4: #441f04;
-  --orange5: #4f2305;
-  --orange6: #5f2a06;
-  --orange7: #763205;
-  --orange8: #943e00;
-  --orange9: #f76808;
-  --orange10: #ff802b;
-  --orange11: #ff8b3e;
-  --orange12: #feeadd;
-
-  --blue1: #0f1720;
-  --blue2: #0f1b2d;
-  --blue3: #10243e;
-  --blue4: #102a4c;
-  --blue5: #0f3058;
-  --blue6: #0d3868;
-  --blue7: #0a4481;
-  --blue8: #0954a5;
-  --blue9: #0091ff;
-  --blue10: #369eff;
-  --blue11: #52a9ff;
-  --blue12: #eaf6ff;
-
-  --red1: #1f1315;
-  --red2: #291415;
-  --red3: #3c181a;
-  --red4: #481a1d;
-  --red5: #541b1f;
-  --red6: #671e22;
-  --red7: #822025;
-  --red8: #aa2429;
-  --red9: #e5484d;
-  --red10: #f2555a;
-  --red11: #ff6369;
-  --red12: #feecee;
 }
 
-:where(html) {
-  block-size: 100%;
-  font-family: var(--family-normal);
-  line-height: 1.5;
-  -webkit-text-size-adjust: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  @media (prefers-reduced-motion: no-preference) {
-    scroll-behavior: smooth;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  :where(:focus-visible) {
-    transition: outline-offset 145ms cubic-bezier(0.25, 0, 0.4, 1);
-  }
-  :where(:not(:active):focus-visible) {
-    transition-duration: 0.25s;
-  }
-}
-
-:where(:not(:active):focus-visible) {
-  outline-offset: 5px;
+html {
+  scroll-behavior: smooth;
 }
 
 :where(body) {
   min-block-size: 100%;
-  background: var(--mauve1);
+  background: var(--background);
 }
 
 :where(body, button, textarea, input) {
-  color: var(--text-light);
+  color: var(--text);
   font: 400 1rem var(--family-normal);
 }
 
 :where(h1, h2, h3, h4, h5, h6, strong, b) {
   font-weight: 600;
-  font-family: var(--family-bold);
 }
 
 :where(a[href], area, button, label[for], summary, [tabindex]:not([tabindex*='-'])) {
@@ -172,5 +68,9 @@ fieldset {
 button {
   border: 0;
   background: transparent;
-  // -webkit-touch-callout: none;
+}
+
+label {
+  font-size: 1rem;
+  line-height: 1.5;
 }

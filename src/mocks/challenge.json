@@ -1,0 +1,355 @@
+{
+    "id": "empire-burger",
+    "name": "Empire Burger",
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "Esse projeto é uma landing page de uma hamburgueria fictícia chamada Empire Burger, nela há seções sobre as ofertas especiais, horário de funcionamento, cardápio contendo os ingredientes e preços, cards com os feedbacks dos clientes e a localização do estabelecimento. O seu desafio é construir este layout e deixá-lo o mais próximo possível do design.",
+            "spans": [
+                {
+                    "start": 69,
+                    "end": 82,
+                    "type": "strong"
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "text": "Você pode usar qualquer ferramenta que deseja para ajudá-lo a completar o desafio, não será avaliado o código, mas sim a fidelidade ao layout e a implementação das funcionalidades solicitadas. Então, se você tem algo que gostaria de praticar, sinta-se à vontade para tentar.",
+            "spans": []
+        },
+        {
+            "type": "paragraph",
+            "text": "Para deixar o desafio mais justo o layout e os critérios de aceite foram separados em três níveis de dificuldade(fácil, médio e difícil). Conforme a dificuldade aumente, você deverá considerar a implementação das dificuldades anteriores, ou seja, se optar pelo dificuldade média, deverá levar em conta todos os critérios da dificuldade fácil e caso prefira a dificuldade difícil, deverá levar em conta todos os critérios da dificuldade fácil e média.",
+            "spans": []
+        },
+        {
+            "type": "paragraph",
+            "text": "Agora vamos para os critérios de aceite(funcionalidades):",
+            "spans": []
+        },
+        {
+            "type": "heading3",
+            "text": "Nível Fácil",
+            "spans": []
+        },
+        {
+            "type": "o-list-item",
+            "text": "Criar as seguintes seções: Menu, Banner hero, Ofertas especiais, Onde fica o nosso castelo, Footer.",
+            "spans": [
+                {
+                    "start": 27,
+                    "end": 98,
+                    "type": "strong"
+                }
+            ]
+        },
+        {
+            "type": "o-list-item",
+            "text": "Ao clicar em um item do menu, o usuário deverá ser levado para a seção correspondente. (material de apoio)",
+            "spans": [
+                {
+                    "start": 88,
+                    "end": 105,
+                    "type": "hyperlink",
+                    "data": {
+                        "link_type": "Web",
+                        "url": "https://www.w3docs.com/snippets/html/how-to-create-an-anchor-link-to-jump-to-a-specific-part-of-a-page.html",
+                        "target": "_blank"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "o-list-item",
+            "text": "Na seção Ofertas especiais os elementos devem ser organizados com o uso da propriedade display:grid do css. (material de apoio)",
+            "spans": [
+                {
+                    "start": 9,
+                    "end": 26,
+                    "type": "strong"
+                },
+                {
+                    "start": 87,
+                    "end": 99,
+                    "type": "em"
+                },
+                {
+                    "start": 103,
+                    "end": 108,
+                    "type": "em"
+                },
+                {
+                    "start": 109,
+                    "end": 126,
+                    "type": "hyperlink",
+                    "data": {
+                        "link_type": "Web",
+                        "url": "https://css-tricks.com/snippets/css/complete-guide-grid/",
+                        "target": "_blank"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "o-list-item",
+            "text": "As informações do card da oferta(nome do prato e gramagem) devem estar no html, a única imagem deve ser a foto do prato com o preço.",
+            "spans": []
+        },
+        {
+            "type": "o-list-item",
+            "text": "Na seção Onde fica o nosso castelo você deverá incorporar uma localização do google maps.  ",
+            "spans": [
+                {
+                    "start": 9,
+                    "end": 34,
+                    "type": "strong"
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "text": "Nível Médio",
+            "spans": []
+        },
+        {
+            "type": "o-list-item",
+            "text": "Todos os requisitos do nivel fácil.",
+            "spans": []
+        },
+        {
+            "type": "o-list-item",
+            "text": "Criar as seguintes seções: Cardápio, Atendimento, Nossas entregas.",
+            "spans": [
+                {
+                    "start": 27,
+                    "end": 65,
+                    "type": "strong"
+                }
+            ]
+        },
+        {
+            "type": "o-list-item",
+            "text": "Na seção Cardápio os preços devem ser formatados com o método Intl.NumberFormat. (material de apoio)",
+            "spans": [
+                {
+                    "start": 9,
+                    "end": 17,
+                    "type": "strong"
+                },
+                {
+                    "start": 62,
+                    "end": 79,
+                    "type": "em"
+                },
+                {
+                    "start": 82,
+                    "end": 99,
+                    "type": "hyperlink",
+                    "data": {
+                        "link_type": "Web",
+                        "url": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat",
+                        "target": "_blank"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "o-list-item",
+            "text": "O card Horário de funcionamento deverá ter os estados aberto e fechado, o estado será alterado conforme o horário do navegador do usuário. (material de apoio)",
+            "spans": [
+                {
+                    "start": 7,
+                    "end": 31,
+                    "type": "strong"
+                },
+                {
+                    "start": 140,
+                    "end": 157,
+                    "type": "hyperlink",
+                    "data": {
+                        "link_type": "Web",
+                        "url": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date",
+                        "target": "_blank"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "heading3",
+            "text": "Nível Difícil",
+            "spans": []
+        },
+        {
+            "type": "o-list-item",
+            "text": "Todos os requisitos do nivel fácil e médio",
+            "spans": []
+        },
+        {
+            "type": "o-list-item",
+            "text": "Criar as seguintes seções: Nossa realeza, Publicações do instagram.",
+            "spans": [
+                {
+                    "start": 27,
+                    "end": 66,
+                    "type": "strong"
+                }
+            ]
+        },
+        {
+            "type": "o-list-item",
+            "text": "Buscar a lista de itens do cardápio via api. (acessar endpoint)",
+            "spans": [
+                {
+                    "start": 9,
+                    "end": 35,
+                    "type": "strong"
+                },
+                {
+                    "start": 46,
+                    "end": 62,
+                    "type": "hyperlink",
+                    "data": {
+                        "link_type": "Web",
+                        "url": "https://api.brchallenges.com/api/empire-burger/menu",
+                        "target": "_blank"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "o-list-item",
+            "text": "Buscar a lista de depoimentos via api. (acessar endpoint)",
+            "spans": [
+                {
+                    "start": 9,
+                    "end": 29,
+                    "type": "strong"
+                },
+                {
+                    "start": 40,
+                    "end": 56,
+                    "type": "hyperlink",
+                    "data": {
+                        "link_type": "Web",
+                        "url": "https://api.brchallenges.com/api/empire-burger/testimonials",
+                        "target": "_blank"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "o-list-item",
+            "text": "Na seção Nossa realeza os depoimentos deverão estar em um carrousel funcional.",
+            "spans": [
+                {
+                    "start": 9,
+                    "end": 22,
+                    "type": "strong"
+                }
+            ]
+        },
+        {
+            "type": "o-list-item",
+            "text": "O texto de cada depoimento deverá estar limitado em quatro linhas, você pode usar a propriedade clamp do css. (material de apoio)",
+            "spans": [
+                {
+                    "start": 96,
+                    "end": 101,
+                    "type": "em"
+                },
+                {
+                    "start": 105,
+                    "end": 108,
+                    "type": "em"
+                },
+                {
+                    "start": 111,
+                    "end": 128,
+                    "type": "hyperlink",
+                    "data": {
+                        "link_type": "Web",
+                        "url": "https://css-tricks.com/almanac/properties/l/line-clamp/"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "paragraph",
+            "text": "Foi criado um repositório template no github com os assets e um README de base, clique aqui para acessar.",
+            "spans": [
+                {
+                    "start": 80,
+                    "end": 91,
+                    "type": "hyperlink",
+                    "data": {
+                        "link_type": "Web",
+                        "url": "https://github.com/leovargasdev/br-challenges-empire-burger"
+                    }
+                }
+            ]
+        }
+    ],
+    "description": "Esse projeto é uma landing page de uma hamburgueria fictícia chamada Empire Burger, nela há seções sobre as ofertas especiais, horário de funcionamento, cardápio contendo os ingredientes e preços, cards com os feedbacks dos clientes e a localização do estabelecimento. O seu desafio é construir este layout e deixá-lo o mais próximo possível do design.",
+    "deadline": "2022-10-03",
+    "image": {
+        "dimensions": {
+            "width": 1798,
+            "height": 635
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.prismic.io/brchallenges/289d6134-7e60-4c8f-827a-a9514cffe100_Captura+de+tela+de+2023-11-26+16-42-17.png?auto=compress,format"
+    },
+    "prototype_url": "https://www.figma.com/file/ag4Az50adOF53pBrwI0wFg/Empire-Burger?node-id=0%3A1",
+    "authors": [
+        {
+            "name": "Tiago Alves",
+            "description": "UI Designer Pleno | Diretor de Criação",
+            "image": {
+                "dimensions": {
+                    "width": 150,
+                    "height": 150
+                },
+                "alt": "Imagem de perfil do Tiago Alves",
+                "copyright": null,
+                "url": "https://images.prismic.io/brchallenges/f8c84d81-1260-4deb-a75a-715f18b4e66d_avatar-tiago-alves.png?auto=compress,format"
+            },
+            "links": [
+                {
+                    "type": "linkedin",
+                    "link": {
+                        "link_type": "Web",
+                        "url": "https://www.linkedin.com/in/tiago-alves-775992105",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "type": "behance",
+                    "link": {
+                        "link_type": "Web",
+                        "url": "https://www.behance.net/tiagofenixe9d9",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "type": "instagram",
+                    "link": {
+                        "link_type": "Web",
+                        "url": "https://www.instagram.com/designer_produtivo_/",
+                        "target": "_blank"
+                    }
+                },
+                {
+                    "type": "website",
+                    "link": {
+                        "link_type": "Web",
+                        "url": "https://designerprodutivo.com.br/link-bio/",
+                        "target": "_blank"
+                    }
+                }
+            ]
+        }
+    ],
+    "status_prismic": "finished"
+}

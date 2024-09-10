@@ -1,0 +1,25 @@
+.container {
+  p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    
+    margin-bottom: 4px;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+  }
+
+  @media(max-width: 768px) {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+
+  @media(max-width: 650px) {
+    p {
+      font-size: 0.75rem;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@keyframes circleAnimation {
+  from {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+@keyframes checkmarkAnimation {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+  40% {
+    height: 0;
+    width: 6px;
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    height: 10px;
+  }
+}
+
+.icon {
+  grid-area: icon;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: var(--green);
+  position: relative;
+  transform: rotate(45deg);
+  
+  &:after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    border-color: #fff;
+    bottom: 6px;
+    left: 6px;
+    height: 10px;
+    width: 6px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    opacity: 0;
+    animation: circleAnimation 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+      forwards;
+    animation-delay: 100ms;
+
+    &:after {
+      opacity: 0;
+      animation: checkmarkAnimation 0.2s ease-out forwards;
+      animation-delay: 200ms;
+    }
+  }
+}

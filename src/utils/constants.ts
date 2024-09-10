@@ -1,9 +1,3 @@
-import { SolutionLevel } from 'types'
-
-// **** CACHE PAGE **** //
-export const CACHE_PAGE = 60 * 60 * 3 // 3 horas
-export const SMALL_CACHE_PAGE = 60 * 10 // 10 minutos
-
 // **** DATE **** //
 export const SHORT_DATE = 'MMM dd, yyyy'
 export const FULL_DATE = "dd' de 'MMMM' de 'yyyy"
@@ -13,8 +7,6 @@ export const LEVELS = {
   medium: 'Médio',
   hard: 'Difícil'
 }
-
-export const LEVELS_TYPE = Object.keys(LEVELS) as SolutionLevel[]
 
 export const LEVELS_OPTIONS = [
   { value: 'easy', label: 'Fácil' },
